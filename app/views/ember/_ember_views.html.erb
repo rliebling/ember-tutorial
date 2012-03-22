@@ -1,0 +1,7 @@
+<%
+view_dir = File.dirname(__FILE__)
+glob = File.join(view_dir, "*.hbars")
+Dir.glob( glob ).each do |hbar_file|
+%>
+  <%= File.read(hbar_file).html_safe %>
+<% end %>
