@@ -1,4 +1,9 @@
 <script type="text/x-handlebars" data-template-name="nav_view">
   some navigation links...
+  {{#each links tagName="ol"}}
+    <li>
+    {{this.int}}, {{this.alpha}}
+    </li>
+  {{/each}}
 </script>
 
