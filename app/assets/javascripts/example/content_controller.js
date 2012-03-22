@@ -11,6 +11,7 @@ Example.ContentController = Ember.Object.extend({
 
   selectLink: function(link) {
     this.set('selectedLink' , link);
+    $('title').text("Selected link " + link);
   }
 
 });
