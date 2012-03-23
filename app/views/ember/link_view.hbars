@@ -1,0 +1,6 @@
+<script type="text/x-handlebars" data-template-name="link_view">
+  <li>
+  {{content.int}}, {{content.alpha}}
+  </li>
+</script>
+

@@ -1,9 +1,14 @@
 <script type="text/x-handlebars" data-template-name="nav_view">
+  <div>
+    {{length}} elements<br/>
+    SORT <br/>
+    {{#view Ember.Button target="Example.navController" action="sortAlpha"}}Alpha{{/view}}
+    {{#view Ember.Button target="Example.navController" action="sortNumeric"}}Numeric{{/view}}
+    {{#view maxTextField target="Example.navController" action="setMax"}}Max{{/view}}
+  </div>
   some navigation links...
   {{#each links tagName="ol"}}
-    <li>
-    {{this.int}}, {{this.alpha}}
-    </li>
+    {{view Example.LinkView contentBinding="this"}}
   {{/each}}
 </script>
 

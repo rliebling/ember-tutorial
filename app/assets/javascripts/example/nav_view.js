@@ -7,9 +7,12 @@ Example.NavView = Em.View.extend({
     console.log("NavView.init");
   },
 
-  click: function(evt) {
-    Example.contentController.selectLink($(evt.target).text());
-  }
+  maxTextField : Em.TextField.extend({
+    insertNewline: function(){
+      var max = this.get('value');
+      Example.navController.setMax(max);
+    }
+  })
 
 });
 
